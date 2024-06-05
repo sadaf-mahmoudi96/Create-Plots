@@ -5,6 +5,10 @@ This repository contains code about creating interesting box plots.
 
 First we need to load the data:
 
+```python 
 import pandas as pd
 
 df = pd.read_csv(r'')
+```
+
+
