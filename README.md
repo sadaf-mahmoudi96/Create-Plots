@@ -27,7 +27,7 @@ Next, we create the plots:
 
 * Histogram
 
-The plots can be overlapping:
+The plots can be overlaying:
 
 ```python
 import matplotlib.pyplot as plt
@@ -46,11 +46,40 @@ plt.title('Histogram of Different Distributions')
 #plt.savefig('*.png', dpi=300) #you can also save your plot
 plt.show()
 ```
-![Overlay Histograms](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/43da20e2-5d5d-417e-92fb-921f85ede930)
-
-‎![Alt text](https://github.com/sadaf-mahmoudi96/Create-Plots/tree/main/Histograms/Overlay_Histograms.png)‎‎
+![Overlay Histograms](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/43da20e2-5d5d-417e-92fb-921f85ede930)‎‎
 
 You can find the lists of colors in python [here](https://matplotlib.org/stable/gallery/color/named_colors.html).
+
+The histograms can be shown in the form of subplots in a plot:
+
+```python
+import matplotlib.cm as cm
+
+# Plotting histograms in the form og subplots
+fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(12, 10))
+
+# Column names
+columns = df.columns
+
+# Define a colormap to show each subplot with a distinct color
+cmap = cm.get_cmap('viridis', len(df.columns))
+
+# Plotting each histogram in a subplot
+for i, ax in enumerate(axes.flatten()):
+    color = cmap(i)  # Get a distinct color from the colormap
+    ax.hist(df[columns[i]], bins=30, color=color, edgecolor='black', density=True, alpha=0.7)
+    ax.set_title(f'Histogram of {columns[i]}')
+    ax.set_xlabel('Values')
+    ax.set_ylabel('Probability Density')
+
+# Adjust layout
+plt.tight_layout()
+
+# Display the plot
+plt.show()
+```
+
+![subplots](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/f1c529e1-272e-4db5-9b31-f3bade331c69)
 
 
 
