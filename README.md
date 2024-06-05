@@ -6,7 +6,6 @@ First we need to load\create the data:
 
 ```python 
 import pandas as pd
-
 import numpy as np
 
 np.random.seed(0)  # For reproducibility
