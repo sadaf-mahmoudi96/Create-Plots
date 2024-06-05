@@ -79,7 +79,36 @@ plt.tight_layout()
 plt.show()
 ```
 
-![subplots](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/f1c529e1-272e-4db5-9b31-f3bade331c69)
+![subplots](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/4700bcf1-35ab-45ff-a798-b3ccfd8ee12f)
+
+
+Or we canhave the histograms to be shown seperately, each in its own subplot.
+
+```python
+
+# Define a colormap
+cmap = cm.get_cmap('viridis', len(df.columns))
+
+# Plotting histograms for each column
+for i,column in enumerate(df.columns):
+    color = cmap(i)
+    plt.figure(figsize=(8, 6))
+    plt.hist(df[column], bins=30, color=color, edgecolor='black', density=True, alpha=0.7)
+    plt.title(f'Histogram of {column}')
+    plt.xlabel('Values')
+    plt.ylabel('Probability Density')
+    plt.show()
+```
+
+![image](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/9453da53-954e-484f-84a0-2207450ff309)
+
+![image](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/3607ca06-8c32-4750-bb53-153fb15a674f)
+
+![image](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/5842733a-da93-4815-8082-475f218da20e)
+
+![image](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/5e6dc4d8-4fa6-41a0-920d-0b570de8965a)
+
+
 
 
 
