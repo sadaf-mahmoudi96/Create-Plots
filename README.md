@@ -26,6 +26,6 @@ df = pd.DataFrame(data)
 
 Next, we create the plots:
 
-*Histogram
+* Histogram
 
 
