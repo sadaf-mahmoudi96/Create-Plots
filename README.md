@@ -47,7 +47,7 @@ plt.title('Histogram of Different Distributions')
 plt.show()
 ```
 
-‎![Overlay Histograms](https://raw.githubusercontent.com/sadaf-mahmoudi96/Create-‎Plots/blob/main/Histograms/Overlay_Histograms.png)‎
+‎![Overlay Histograms]( https://github.com/sadaf-mahmoudi96/Create-‎Plots/blob/main/Histograms/Overlay_Histograms.png)‎‎
 
 You can find the lists of colors in python [here](https://matplotlib.org/stable/gallery/color/named_colors.html).
 
