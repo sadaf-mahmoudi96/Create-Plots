@@ -46,6 +46,7 @@ plt.title('Histogram of Different Distributions')
 #plt.savefig('*.png', dpi=300) #you can also save your plot
 plt.show()
 ```
+![Overlay Histograms](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/43da20e2-5d5d-417e-92fb-921f85ede930)
 
 ‎![Alt text](https://github.com/sadaf-mahmoudi96/Create-Plots/tree/main/Histograms/Overlay_Histograms.png)‎‎
 
