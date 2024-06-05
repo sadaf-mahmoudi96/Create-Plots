@@ -48,6 +48,8 @@ plt.title('Histogram of Different Distributions')
 plt.show()
 ```
 
+You can find the lists of colors in python [here](https://matplotlib.org/stable/gallery/color/named_colors.html).
+
 
 
 
