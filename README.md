@@ -22,4 +22,10 @@ data = {
 df = pd.DataFrame(data)
 ```
 
+2. Creating the plots
+
+Next, we create the plots:
+
+*Histogram
+
 
