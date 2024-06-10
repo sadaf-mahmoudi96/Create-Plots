@@ -109,6 +109,66 @@ for i,column in enumerate(df.columns):
 ![image](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/5e6dc4d8-4fa6-41a0-920d-0b570de8965a)
 
 
+* Boxplots
+
+```python
+import matplotlib.pyplot as plt
+
+plt.rcParams.update({"font.family": "Bell MT"})
+plt.rcParams.update({'font.size': 14}) 
+
+fig = plt.figure(figsize =(10, 7))
+ax = fig.add_subplot(111)
+ 
+# Creating axes instance
+bp = ax.boxplot(df, patch_artist = True,
+                notch ='True', vert = 0) #notch is the way the plots are narrower in teh middle
+                                         # vert is the option for showing the boxplots vertically or horizontally
+colors = ['#0000FF', '#00FF00', 
+          '#FFFF00', '#FF00FF'] #the colors of the plots
+ 
+for patch, color in zip(bp['boxes'], colors):
+    patch.set_facecolor(color)
+ 
+# changing color and linewidth of whiskers
+for whisker in bp['whiskers']:
+    whisker.set(color ='#8B008B',
+                linewidth = 1.5,
+                linestyle =":")
+ 
+# changing color and linewidth of caps
+for cap in bp['caps']:
+    cap.set(color ='#8B008B',
+            linewidth = 2)
+ 
+# changing color and linewidth of medians
+for median in bp['medians']:
+    median.set(color ='red',
+               linewidth = 3)
+ 
+# changing style of fliers
+for flier in bp['fliers']:
+    flier.set(marker ='s', 
+              color ='#e7298a',
+              alpha = 0.5)
+     
+ax.set_yticklabels(['Normal', 'Exponential', 
+                    'Uniform', 'Poisson'])
+ 
+plt.title("Distributions Boxplots")
+ 
+ax.get_xaxis().tick_bottom()
+ax.get_yaxis().tick_left()
+plt.show()
+```
+
+![image](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/d35cdad4-e728-4594-b8ae-0dbd8c0bcb7f)
+
+The source of the above code is [this website](https://www.geeksforgeeks.org/box-plot-in-python-using-matplotlib/).
+
+
+
+
 
 
 
