@@ -48,7 +48,7 @@ plt.show()
 ```
 ![Overlay Histograms](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/43da20e2-5d5d-417e-92fb-921f85ede930)‎‎
 
-You can find the lists of colors in python [here](https://matplotlib.org/stable/gallery/color/named_colors.html).
+You can find the lists of colors in python [here](https://matplotlib.org/stable/gallery/color/named_colors.html). Moreover, the color codes for Python can be found [here](https://www.kaggle.com/code/asimislam/python-colors-color-cmap-palette).
 
 The histograms can be shown in the form of subplots in a plot:
 
