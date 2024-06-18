@@ -319,6 +319,36 @@ plt.show()
 ![image](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/48550426-d7fe-4374-bf43-f414b366e3ef)
 
 
+* Scatter Plot
+
+Plotting the distributions in different subplots as a scatter plot:
+
+```python
+
+# Plotting
+fig, axs = plt.subplots(2, 2, figsize=(12, 8))
+
+# Define colormaps
+colormaps = ['viridis', 'plasma', 'inferno', 'cividis']
+
+# Plot each distribution with a different colormap
+for (ax, distribution, colormap) in zip(axs.flatten(), df.columns, colormaps):
+    sc = ax.scatter(range(len(df)), df[distribution], c=df[distribution], cmap=colormap)
+    ax.set_title(distribution)
+    ax.set_xlabel('Index')
+    ax.set_ylabel('Value')
+    ax.grid(True)
+    ax.set_facecolor('whitesmoke')
+    ax.set_axisbelow(True)
+    fig.colorbar(sc, ax=ax, orientation='vertical', pad=0.05)
+
+# Adjust layout
+plt.tight_layout()
+plt.show()
+```
+
+
+![image](https://github.com/sadaf-mahmoudi96/Create-Plots/assets/98908606/59e111b7-9003-4bec-baa1-ccbae16b9b18)
 
 
 
